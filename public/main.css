@@ -1,0 +1,307 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: rgb(183, 193, 183);
+  color: rgb(53, 67, 53); 
+  width: 100%;
+  margin: 0;
+}
+
+body p {
+  font-size: 18px;
+}
+
+/*Styling the navigation bar */
+.nav-container {
+    display: flex;
+    justify-content: center;
+
+    width: 95%;
+    margin: 0 auto;
+    padding: 5px;
+    
+    
+}
+
+.navBar {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  
+}
+
+.nav-ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  align-content: center;
+  align-items: center;
+  
+}
+.nav-ul li {
+  width: 80px;
+  height: fit-content;
+  padding: 10px;
+  background-color:rgba(223, 216, 216, 0.279);
+  list-style: none;
+  font-size: 16px;
+  margin: 10px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.nav-ul li:hover {
+  background-color:rgba(144, 140, 140, 0.279);
+  cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(74, 70, 70);
+    transition: color .5s
+}
+a:hover {
+    color: rgba(23, 23, 92, 0.449);
+}
+
+
+.liItem__home {
+    padding: 5px;
+    width: 100%;
+    border-radius: 10px;
+    border: solid rgba(219, 217, 217, 0.429) 1px;
+    background-color: rgba(219, 217, 217, 0.429); 
+    margin: 5px 0 10px 0;
+    color: rgb(53, 67, 53);
+}
+
+/*Styling posts appearance  */
+.homeContainer {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    width: 60%;
+    font-size: 14px;
+}
+
+
+/* Changing the list style */
+.homeUl {
+    list-style-type: none;
+    padding-left: 20px;
+  }
+  
+  .homeUl li {
+    position: relative; /* Set position relative to create a reference point */
+    padding-left: 20px; /* Add left padding to create space for the image */
+  }
+  
+  .homeUl li::before {
+    content: ""; /* Remove the default content of the pseudo-element */
+    position: absolute; /* Set position absolute for precise placement */
+    top: 50%; /* Adjust the top position to center the image vertically */
+    left: -20px; /* Position the image to the left of the list item */
+    transform: translate(-50%, -50%); /* Center the image precisely */
+    background-image: url('img/haha.gif'); /* Replace 'path/to/image.png' with the actual path to your image */
+    background-size: cover; /* Adjust the image size to cover the pseudo-element */
+    background-position: center; /* Center the image within the pseudo-element */
+    width: 20px; /* Set the width of the image */
+    height: 20px; /* Set the height of the image */
+    border-radius: 50%; /* Make the image round */
+  }
+  
+/*Styling the Delete All Button */
+.deleteAllBtn {
+    background-color: black;
+    color: white;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color .5s;
+}
+
+.deleteAllBtn:hover {
+    background-color: red;  
+}
+
+.delAllBtnCont {
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (min-width: 2000px) {
+  body p {
+    font-size: 24px;
+  }
+}
+
+  @media screen and (max-width: 800px) {
+    body p {
+      font-size: 18px;
+    }
+
+  }
+
+  @media screen and (max-width: 430px) {
+    body p {
+      font-size: 16px;
+    }
+    .homeContainer {
+
+      width: 80%;
+  }
+
+  .liItem__home {
+    padding: 0;
+  }
+
+  .homeUl {
+    padding: 0;
+  }
+  }
+
+/*Style Create posts form */
+
+
+
+input[type="text"] {
+    /* Your styles here */
+    font-size: 20px;
+    border: none;
+    background-color: rgba(219, 217, 217, 0);
+    border: solid rgba(219, 217, 217, 0.871) 2px;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    
+  }
+  .inputCenter {
+    display: flex;
+    justify-content: center;
+    width: 60vw;
+  }
+
+textarea {
+    resize: vertical;
+    border: solid rgba(219, 217, 217, 0.871) 2px;
+    background-color: rgba(219, 217, 217, 0);
+    border-radius: 10px;
+    padding: 10px;
+    width: 60vw;
+    height: 30vh;
+    min-height: 200px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    white-space: pre-wrap;
+}
+
+
+
+.updateCreateFormCont {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    width: 80vw;
+    border-radius: 10px;
+    background-color: rgba(219, 217, 217, 0.429);
+
+}
+.updateCreateBtn {
+    background-color: rgb(44, 53, 42);
+    color: white;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color .5s;
+    margin: 10px;
+}
+
+.updateCreateBtn:hover {
+    background-color: gray;
+}
+
+.updateCreateBtnDiv {
+    display: flex;
+    justify-content: center;
+}
+
+.nav-update {
+    margin-bottom: 7px;
+}
+
+/*Styling view page */
+.viewContainer {
+    font-size: 16px;
+    display: flex;
+    
+    align-items: center;
+    flex-direction: column;
+    width: 80vw;
+    margin: auto;
+    border-radius: 10px;
+    background-color: rgba(219, 217, 217, 0.429);
+}
+
+.viewContent {
+    display: flex;
+    justify-content: center;
+}
+
+.viewText {
+    padding: 10px;
+}
+
+.viewBtns {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
+}
+
+.deleteBtn {
+    background-color: rgba(151, 1, 1, 0.393);
+    color: white;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color .5s;
+    margin-bottom: 10px;
+}
+.deleteBtn:hover {
+    background-color: rgb(151, 1, 1);
+}
+
+.editBtn {
+    background-color: rgba(0, 128, 0, 0.37);
+    color: white;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color .5s;
+    margin-bottom: 10px;
+}
+
+.editBtn:hover {
+    background-color: rgba(0, 128, 0, 0.649);
+}
+
+.inputCenter{
+  color: rgb(53, 67, 53); 
+}
+
+#textarea__content {
+  color: rgb(53, 67, 53); 
+}
+
+#post {
+  color: rgb(53, 67, 53);
+}

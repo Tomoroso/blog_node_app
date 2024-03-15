@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog-homePage</title>
+    <link rel="stylesheet" type="text/css" href="/main.css">
+    
+</head>
+<body>
+    <%-include("header.ejs")%>
+    <!--Here I add div where I see every post-->
+    <div class="homeContainer">
+      <% if (posts.length === 0) { %>
+         <p id="defaultHometext">You have to create a new post...</p>
+      <% } else { %>
+        <ul class="homeUl">
+            <% posts.forEach((post) => { %>
+             
+             
+              <li class="liItem__home">
+                <a href="/view/<%=posts.indexOf(post)%>">
+                  <span>Click the post to edit</span>
+                  <p><%=post.stringDate%></p>
+                  <h2><%=post.title%></h2>
+                  <p><%=post.content%></p>
+                </a>
+              </li>
+             
+              
+            <% }) %>
+          </ul>
+          
+        </div>
+
+
+        <% } %> 
+
+    
+</body>
+</html>

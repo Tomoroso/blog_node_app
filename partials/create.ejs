@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="stylesheet" type="text/css" href="/main.css">
+</head>
+<body>
+    
+    <!--Here is the page where I create a new post-->
+    <%-include("header.ejs")%>
+    
+    
+    <% if (locals.postId) { %> 
+        
+            <div class="updateCreateFormCont">
+                <form  action="/update" method="post">
+                    <h1><input class="inputCenter" type="text" name="title" value="<%=title%>"></h1>
+            
+                    
+                        <code><textarea  name="content" id="textarea__content"  cols="60" rows="15"> <%= content %></textarea></code>
+                    
+                    <!--I add the line below for having the post index for updating the right item-->
+                    <input hidden type="text" name="index" value="<%=postId%>">
+                    <div class="updateCreateBtnDiv">
+                        <input class="updateCreateBtn" type="submit" value="Update">
+                    </div>
+                </form>
+            </div>
+        
+    <% } else { %>
+        <div class="updateCreateFormCont">
+            <form action="/submit" method="POST">
+                <!-- <label for="title">Title</label> -->
+                <h1><input class="inputCenter" type="text" id="title" name="title" placeholder="Title"></h1>
+                <p><textarea name="post" id="post" cols="60" rows="15" placeholder="Type here the post"></textarea></p>
+                <div class="updateCreateBtnDiv">
+                    <input class="updateCreateBtn" type="submit" value="Create">
+                </div>
+            </form>
+        </div>
+    <% } %>
+
+
+</body>
+</html>
+

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+</head>
+<body>
+    
+    <!--Here I will see the lcicked post for edit or delete-->
+    <%-include("header.ejs")%>
+    <div class="viewContainer">
+        <h3 class="viewTitle"><%=title%></h3>
+        <div class="viewContent">
+          <p class="viewText"><%=content%></p>  
+        </div>
+        
+        <div class="viewBtns">
+            <form action="/delete/<%= postId %>" method="post">
+
+            <input hidden type="text" name="index" value="<%=postId%>">
+            <input class="deleteBtn" type="submit" value="Delete">
+
+            <a  href="/edit/<%= postId %>"><input class="editBtn" type="button" value="Edit"></a>
+   
+            </form>  
+        </div>
+        
+    </div>
+</body>
+</html>
+
